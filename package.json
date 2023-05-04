@@ -1,6 +1,6 @@
 {
-  "name": "lance-gg",
-  "version": "4.0.9",
+  "name": "@rtsdk/lance-topia",
+  "version": "0.0.1",
   "description": "A Node.js based real-time multiplayer game server",
   "main": "dist/server/lance-gg.js",
   "browser": "dist/client/lance-gg.js",
@@ -10,7 +10,9 @@
     "build": "rollup --config rollup.config.js",
     "test-all": "mocha test/EndToEnd/",
     "test-serializer": "mocha ./test/serializer/",
-    "test": "mocha ./test/serializer/ --compilers js:@babel/register"
+    "test": "mocha ./test/serializer/ --compilers js:@babel/register",
+    "pkg": "yarn && yarn build && npm publish",
+    "local-publish": "yarn build && yalc publish --push --no-scripts"
   },
   "keywords": [
     "pixijs",
@@ -28,7 +30,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/lance-gg/lance.git"
+    "url": "git://github.com/metaversecloud-com/lance.git"
   },
   "dependencies": {
     "bufferutil": "^4.0.1",
@@ -36,29 +38,28 @@
     "event-emitter": "^0.3.5",
     "jsdoc": "^3.6.3",
     "mkdirp": "^0.5.1",
-    "p2": "^0.7.1",
-    "socket.io": "^2.1.1",
-    "socket.io-client": "^2.1.1",
+    "socket.io": "^4.5.0",
+    "socket.io-client": "^4.5.0",
     "utf-8-validate": "^5.0.2"
   },
   "files": [
     "src",
     "dist"
   ],
-  "author": "Opher Vishnia",
+  "author": "Topia Team",
   "contributors": [
     {
-      "name": "Opher Vishnia"
+      "name": "Topia Team"
     },
     {
-      "name": "Gary Weiss"
+      "name": "Topia Team"
     }
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/lance-gg/lance/issues"
+    "url": "https://github.com/metaversecloud-com/lance/issues"
   },
-  "homepage": "https://github.com/lance-gg/lance#readme",
+  "homepage": "https://github.com/metaversecloud-com/lance#readme",
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-class-properties": "^7.3.4",

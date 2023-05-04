@@ -32,6 +32,10 @@
     "type": "git",
     "url": "git://github.com/metaversecloud-com/lance.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "bufferutil": "^4.0.1",
     "cannon": "^0.6.2",

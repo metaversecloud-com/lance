@@ -60,7 +60,7 @@ class GameWorld {
       conditions.push(!("roomName" in query) || (query.roomName !== null && object.roomName === query.roomName));
 
       // roomName condition
-      conditions.push(!("AI" in query) || (query.AI !== null && object.AI === query.AI));
+      conditions.push(!("AI" in query) || (query.AI !== null && !!object.AI === !!query.AI));
 
       // instance type conditio
       conditions.push(

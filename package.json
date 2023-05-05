@@ -1,6 +1,6 @@
 {
   "name": "@rtsdk/lance-topia",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Node.js based real-time multiplayer game server",
   "main": "dist/server/lance-gg.js",
   "browser": "dist/client/lance-gg.js",

@@ -36,6 +36,7 @@ class GameWorld {
    * @param {Object} [query.id] object id
    * @param {Object} [query.playerId] player id
    * @param {Object} [query.roomName] roomName
+   * @param {Object} [query.AI] Is AI.  {AI: true} or {AI: false}
    * @param {Class} [query.instanceType] matches whether `object instanceof instanceType`
    * @param {Array} [query.components] An array of component names
    * @param {Boolean} [query.returnSingle] Return the first object matched
@@ -57,6 +58,9 @@ class GameWorld {
 
       // roomName condition
       conditions.push(!("roomName" in query) || (query.roomName !== null && object.roomName === query.roomName));
+
+      // roomName condition
+      conditions.push(!("AI" in query) || (query.AI !== null && object.AI === query.AI));
 
       // instance type conditio
       conditions.push(

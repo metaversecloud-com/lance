@@ -1,6 +1,6 @@
 {
   "name": "@rtsdk/lance-topia",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A Node.js based real-time multiplayer game server",
   "main": "dist/server/lance-gg.js",
   "browser": "dist/client/lance-gg.js",
@@ -42,8 +42,8 @@
     "event-emitter": "^0.3.5",
     "jsdoc": "^3.6.3",
     "mkdirp": "^0.5.1",
-    "socket.io": "^4.5.0",
-    "socket.io-client": "^2.1.1",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
     "utf-8-validate": "^5.0.2"
   },
   "files": [

@@ -162,7 +162,7 @@ class ServerEngine {
     // update clients only at the specified step interval, as defined in options
     // or if this room needs to sync
     const room = this.rooms[roomName];
-    if (room.requestImmediateSync || this.gameEngine.world.stepCount % this.options.updateRate === 0) {
+    if ((room && room.requestImmediateSync) || this.gameEngine.world.stepCount % this.options.updateRate === 0) {
       const roomPlayers = Object.keys(this.connectedPlayers).filter(
         (p) => this.connectedPlayers[p].roomName === roomName,
       );
@@ -293,7 +293,7 @@ class ServerEngine {
       objectInstance: obj,
     });
 
-    if (this.options.updateOnObjectCreation) {
+    if (this.rooms[obj._roomName] && this.options.updateOnObjectCreation) {
       this.rooms[obj._roomName].requestImmediateSync = true;
     }
   }

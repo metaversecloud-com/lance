@@ -314,7 +314,7 @@ class ServerEngine {
   onPlayerConnected(socket) {
     let that = this;
 
-    console.log("Client connected");
+    // console.log("Client connected");
 
     // save player
     this.connectedPlayers[socket.id] = {
@@ -333,7 +333,7 @@ class ServerEngine {
     socket.joinTime = new Date().getTime();
     this.resetIdleTimeout(socket);
 
-    console.log("Client Connected", socket.id);
+    // console.log("Client Connected", socket.id);
 
     let playerEvent = { id: socket.id, playerId, joinTime: socket.joinTime, disconnectTime: 0 };
     this.gameEngine.emit("server__playerJoined", playerEvent);
@@ -376,7 +376,8 @@ class ServerEngine {
   // handle player dis-connection
   onPlayerDisconnected(socketId, playerId) {
     delete this.connectedPlayers[socketId];
-    console.log("Client disconnected");
+    delete this.playerInputQueues[playerId];
+    // console.log("Client disconnected");
   }
 
   // resets the idle timeout for a given player
